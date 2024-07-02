@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Header from './components/Header';
 
 function App() {
   const [csvData, setCsvData] = useState([]);
@@ -68,7 +68,8 @@ function App() {
   return (
 
     <>
-      <div>
+    <Header />
+      <div className='bg-slate-500'>
         {csvData.map(dato => (
           <div key={dato.id}>
           <p>ID: {dato.id}<strong className='nombre'>{dato.nombre}</strong> <span className='categoria'>{dato.categoria}</span></p>
