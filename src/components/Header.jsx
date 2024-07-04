@@ -3,7 +3,7 @@ import ImageMalteada from '../images/malteada.webp'
 import styles from '../styles/header.module.css'
 import IconCart from "./icons/IconCart"
 
-const Header = ({mostrarModal}) => {
+const Header = ({ mostrarModal, active }) => {
     return (
         <header className="overflow-hidden">
             <section className="contenedor py-8 relative">
@@ -17,7 +17,7 @@ const Header = ({mostrarModal}) => {
                     <p>{INFO.summary}</p>
                 </div>
                 <button
-                className="absolute top-0 right-0 bg-blue-600"
+                    className={`absolute top-5 z-50 px-4 rounded right-0 border ${active ? 'bg-slate-200' : ''}`}
                     onClick={() => mostrarModal()}
                 ><IconCart className="w-8 h-8" /></button>
             </section>
