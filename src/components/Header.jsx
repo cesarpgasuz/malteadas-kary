@@ -1,7 +1,9 @@
 import { INFO } from "../data"
 import ImageMalteada from '../images/malteada.webp'
 import styles from '../styles/header.module.css'
-const Header = () => {
+import IconCart from "./icons/IconCart"
+
+const Header = ({mostrarModal}) => {
     return (
         <header className="overflow-hidden">
             <section className="contenedor py-8 relative">
@@ -14,7 +16,10 @@ const Header = () => {
                     <h1 className="text-3xl font-bold mb-2 mt-2">{INFO.title}</h1>
                     <p>{INFO.summary}</p>
                 </div>
-
+                <button
+                className="absolute top-0 right-0 bg-blue-600"
+                    onClick={() => mostrarModal()}
+                ><IconCart className="w-8 h-8" /></button>
             </section>
         </header>
     )

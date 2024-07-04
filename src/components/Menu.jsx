@@ -1,7 +1,7 @@
 import { MALTEADAS } from "../data"
 import MenuItem from "./ui/MenuItem"
 
-const Menu = () => {
+const Menu = ({addProducto}) => {
     return (
         <div className="contenedor py-9">
 
@@ -10,6 +10,7 @@ const Menu = () => {
                     <MenuItem
                         key={malteada.id}
                         malteada={malteada}
+                        addProducto={addProducto}
                     />
                 ))}
 

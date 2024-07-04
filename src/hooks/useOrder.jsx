@@ -1,8 +1,22 @@
 import { useState } from "react"
 
 const useOrder = () => {
+
+  const [orden, setOrden] = useState([])
+  const [active, setActive] = useState(false)
+
+
+  const addProducto = (item) => {
+    setOrden([...orden, item])
+    
+  }
+
+  const mostrarModal = () => {
+    setActive(!active)
+  }
+
   return (
-    <div>useOrder</div>
+    {addProducto, mostrarModal, active}
   )
 }
 export default useOrder
