@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
+import Menu from './components/Menu';
 
 function App() {
   const [csvData, setCsvData] = useState([]);
@@ -69,6 +70,7 @@ function App() {
 
     <>
     <Header />
+    <Menu />
       <div className='bg-slate-500'>
         {csvData.map(dato => (
           <div key={dato.id}>
