@@ -7,7 +7,7 @@ import {Toaster} from 'react-hot-toast'
 
 function App() {
   
-  const {addProducto, mostrarModal, active, orden} = useOrder()
+  const {addProducto, mostrarModal, active, orden, removeItem} = useOrder()
 
   return (
 
@@ -16,10 +16,12 @@ function App() {
     <Cart 
       active={active}
       orden={orden}
+      removeItem={removeItem}
     />
     <Header 
       mostrarModal={mostrarModal}
       active={active}
+      orden={orden}
     />
     <Menu
       addProducto={addProducto}
