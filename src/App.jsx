@@ -17,6 +17,7 @@ function App() {
       active={active}
       orden={orden}
       removeItem={removeItem}
+      mostrarModal={mostrarModal}
     />
     <Header 
       mostrarModal={mostrarModal}
