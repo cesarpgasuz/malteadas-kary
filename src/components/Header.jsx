@@ -13,9 +13,9 @@ const Header = ({ mostrarModal, active, orden }) => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
 
-            if(scrollPosition > 80){
+            if (scrollPosition > 80) {
                 setIsScrolled(true)
-            }else{
+            } else {
                 setIsScrolled(false)
             }
         }
@@ -39,14 +39,18 @@ const Header = ({ mostrarModal, active, orden }) => {
 
     return (
         <>
-            <nav className={`contenedor z-50 ${isScrolled ? 'bg-slate-100 shadow-lg' : '' } transition-all fixed top-0 left-0 right-0 flex justify-between items-center h-[60px] px-2`}>
-                <span
-                    className={`${isScrolled ? 'text-slate-900' : 'text-transparent'} transition-all font-bold`}
-                >Malteadas Kary</span>
-                <button
+            <nav className={`z-50 ${isScrolled ? 'bg-white shadow-lg' : ''} transition-all fixed top-0 left-0 right-0  h-[60px]`}>
+                <div className="contenedor flex justify-between items-center h-full">
+                    <span
+                        className={`${isScrolled ? 'text-slate-900' : 'text-transparent'} transition-all font-bold`}
+                    >Malteadas Kary</span>
+
+                     <button
                     className={`relative top-2 z-50 px-4 flex-shrink w-fit h-fit rounded right-0 ${active ? 'bg-slate-200' : ''}`}
                     onClick={() => mostrarModal()}
-                ><IconCart className="w-8 h-8" />{orden.length > 0 && <IconTotal itemsTotal={itemsTotal} />}</button>
+                ><IconCart className="w-8 h-8" />{orden.length > 0 && <IconTotal itemsTotal={itemsTotal} />}</button>   
+                </div>
+                
             </nav>
             <header className="overflow-hidden">
                 <section className="contenedor py-8 relative">
@@ -56,8 +60,8 @@ const Header = ({ mostrarModal, active, orden }) => {
                         <img src={ImageMalteada} alt="imagen de una malteada" className="w-[90px] h-[90px]" />
                     </div>
                     <div className="relative z-10">
-                        <h1 className="text-3xl font-bold mb-2 mt-2">{INFO.title}</h1>
-                        <p>{INFO.summary}</p>
+                        <h1 className="text-3xl font-bold mb-2 mt-2 text-slate-900">{INFO.title}</h1>
+                        <p className="text-slate-600">{INFO.summary}</p>
                     </div>
 
                 </section>
