@@ -29,6 +29,7 @@ const useOrder = () => {
 
   const removeItem = (id) => {
     setOrden(orden.filter(ordenItem => ordenItem.id !== id))
+    toast.success('Producto Eliminado')
   }
 
 
