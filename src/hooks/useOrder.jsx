@@ -44,27 +44,34 @@ const useOrder = () => {
 
   const enviarPedido = () => {
 
-    const nombre = prompt('Cual es tu nombre ?')
+    // const nombre = prompt('Cual es tu nombre ?')
 
 
-    try {
-      if (nombre === '' || typeof nombre === Number || nombre === null || nombre.length < 4) {
-        alert('Agrega un nombre')
-      } else {
-        const miPedido = orden.map(item => `- *${item.cantidad}* ${item.nombre} ($${item.precio}) - *$${item.cantidad * item.precio}*`).join('\n');
-        const mensaje = encodeURIComponent(`¡Hola me llamo *${nombre}*! y me gustaria encargar estos productos:\n\n${miPedido}\n\n Total: *$${totalPedido}*`)
-        const whatsappUrl = `https://wa.me/+524191389032?text=${mensaje}`
+    // try {
+    //   if (nombre === '' || typeof nombre === Number || nombre === null || nombre.length < 4) {
+    //     alert('Agrega un nombre')
+    //   } else {
+    //     const miPedido = orden.map(item => `- *${item.cantidad}* ${item.nombre} ($${item.precio}) - *$${item.cantidad * item.precio}*`).join('\n');
+    //     const mensaje = encodeURIComponent(`¡Hola me llamo *${nombre}*! y me gustaria encargar estos productos:\n\n${miPedido}\n\n Total: *$${totalPedido}*`)
+    //     const whatsappUrl = `https://wa.me/+524191389032?text=${mensaje}`
 
-        window.open(whatsappUrl)
-      }
-    } catch (error) {
-      toast(
-        "No se pudo enviar tu pedido.\n\nIntenta otra vez, evita bloquear las ventanas emergentes",
-        {
-          duration: 5000,
-        }
-      );
-    }
+    //     window.open(whatsappUrl)
+    //   }
+    // } catch (error) {
+    //   toast(
+    //     "No se pudo enviar tu pedido.\n\nIntenta otra vez, evita bloquear las ventanas emergentes",
+    //     {
+    //       duration: 5000,
+    //     }
+    //   );
+    // }
+
+
+    const miPedido = orden.map(item => `- *${item.cantidad}* ${item.nombre} ($${item.precio}) - *$${item.cantidad * item.precio}*`).join('\n');
+    const mensaje = encodeURIComponent(`¡Hola*! me gustaria encargar estos productos:\n\n${miPedido}\n\n Total: *$${totalPedido}*`)
+    const whatsappUrl = `https://wa.me/+524191389032?text=${mensaje}`
+
+    window.open(whatsappUrl)
 
   }
 
