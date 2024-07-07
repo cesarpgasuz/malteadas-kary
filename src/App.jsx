@@ -7,7 +7,7 @@ import {Toaster} from 'react-hot-toast'
 
 function App() {
   
-  const {addProducto, mostrarModal, active, orden, removeItem} = useOrder()
+  const {addProducto, mostrarModal, active, orden, removeItem, enviarPedido} = useOrder()
 
   return (
 
@@ -18,6 +18,7 @@ function App() {
       orden={orden}
       removeItem={removeItem}
       mostrarModal={mostrarModal}
+      enviarPedido={enviarPedido}
     />
     <Header 
       mostrarModal={mostrarModal}

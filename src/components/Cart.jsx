@@ -2,7 +2,7 @@ import OrdenTotal from "./OrdenTotal"
 import IconClose from "./icons/IconClose"
 
 
-const Cart = ({ active, orden, removeItem, mostrarModal }) => {
+const Cart = ({ active, orden, removeItem, mostrarModal, enviarPedido }) => {
 
   const TitleCarrito = () => (
     <h3 className="text-left font-bold text-slate-900 mb-4 uppercase text-2xl mt-5">{orden.length ? 'Mi Pedido' : 'Pedido'}</h3>
@@ -45,6 +45,7 @@ const Cart = ({ active, orden, removeItem, mostrarModal }) => {
           />
           <button
             className="w-full block bg-green-600 text-green-100 rounded px-2 py-3 mt-auto"
+            onClick={() => enviarPedido()}
           >Enviar pedido por Whatsapp</button>
         </div>
 
