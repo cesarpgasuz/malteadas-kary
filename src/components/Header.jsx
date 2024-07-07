@@ -34,7 +34,7 @@ const Header = ({ mostrarModal, active, orden }) => {
     const itemsTotal = useMemo(() => orden.reduce((total, item) => total + item.cantidad, 0), [orden])
 
     const IconTotal = ({ itemsTotal }) => (
-        <span className="absolute bg-pink-700 w-7 h-7 text-pink-100 font-bold flex justify-center items-center rounded-full -right-1 -top-4">{itemsTotal}</span>
+        <span className="absolute bg-pink-700 w-7 h-7 text-pink-100 font-bold flex justify-center items-center rounded-full -right-[5px] -top-2">{itemsTotal}</span>
     )
 
     return (
@@ -46,7 +46,7 @@ const Header = ({ mostrarModal, active, orden }) => {
                     >Malteadas Kary</span>
 
                      <button
-                    className={`relative top-2 z-50 px-4 flex-shrink w-fit h-fit rounded right-0 ${active ? 'bg-slate-200' : ''}`}
+                    className="relative z-50 px-4 flex-shrink w-fit h-fit rounded right-0 active:bg-slate-200"
                     onClick={() => mostrarModal()}
                 ><IconCart className="w-8 h-8" />{orden.length > 0 && <IconTotal itemsTotal={itemsTotal} />}</button>   
                 </div>
