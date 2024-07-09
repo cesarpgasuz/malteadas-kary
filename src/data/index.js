@@ -1,12 +1,68 @@
 export const INFO = {
-    title: 'Malteadas Kary',
-    summary: 'Disfruta de las mejores malteadas de Doctor Mora.',
-    phone: '4191389032',
-    address: 'Av. Guanajuato #18',
-    colonia: 'Los Duraznos',
-    city: 'Doctor Mora',
-    state: 'Guanajuato'
+    title: "Malteadas Kary",
+    summary: "Disfruta de las mejores malteadas de Doctor Mora.",
+    phone: "4191389032",
+    address: "Av. Guanajuato #18",
+    colonia: "Los Duraznos",
+    city: "Doctor Mora",
+    state: "Guanajuato"
 }
+
+export const SERVICIOS = [
+  {
+    id: 1,
+    title: "Consumo en el local",
+    image: "mesa.webp"
+  },
+  {
+    id: 2,
+    title: "Servicio a Domicilio",
+    image: "repartidor.webp"
+  },
+  {
+    id: 3,
+    title: "Diferentes formas de pago",
+    image: "metodo-de-pago.webp"
+  }
+]
+
+export const HORARIOS = [
+  {
+    id: 1,
+    day: "Lunes",
+    hora: "10:00 am - 4:00pm"
+  },
+  {
+    id: 2,
+    day: "Martes",
+    hora: "10:00 am - 4:00pm"
+  },
+  {
+    id: 3,
+    day: "Miercoles",
+    hora: "10:00 am - 4:00pm"
+  },
+  {
+    id: 4,
+    day: "Jueves",
+    hora: "10:00 am - 6:00pm"
+  },
+  {
+    id: 5,
+    day: "Viernes",
+    hora: "10:00 am - 10:00pm"
+  },
+  {
+    id: 6,
+    day: "Sabado",
+    hora: "10:00 am - 10:00pm"
+  },
+  {
+    id: 7,
+    day: "Domingo",
+    hora: "10:00 am - 9:00pm"
+  }
+]
 
 export const MALTEADAS = [
   {
