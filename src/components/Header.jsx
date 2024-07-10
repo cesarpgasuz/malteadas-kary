@@ -47,7 +47,7 @@ const Header = ({ mostrarModal, active, orden }) => {
 
                      <button
                     className="relative z-50 px-4 flex-shrink w-fit h-fit rounded right-0 active:bg-slate-200"
-                    onClick={() => mostrarModal()}
+                    onClick={mostrarModal}
                 ><IconCart className="w-8 h-8" />{orden.length > 0 && <IconTotal itemsTotal={itemsTotal} />}</button>   
                 </div>
                 
