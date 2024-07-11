@@ -1,6 +1,10 @@
-const MenuItem = ({ malteada, addProducto }) => {
+import useOrden from "../../hooks/useOrden";
+
+const MenuItem = ({ malteada}) => {
     const { nombre, descripcion, imagen, precio } = malteada;
     
+    const {addProducto} = useOrden()
+
     return (
         <div 
             key={malteada.id} 
