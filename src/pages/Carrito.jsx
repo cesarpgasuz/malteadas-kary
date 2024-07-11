@@ -7,7 +7,7 @@ const Cart = () => {
 
   const {orden, removeItem, enviarPedido} = useOrden()
 
-  console.log(orden)
+  // console.log(orden)
 
   const TitleCarrito = () => (
     <h3 className="text-left font-bold text-slate-900 mb-4 uppercase text-2xl mt-5">{orden.length ? 'Mi Pedido' : 'Pedido'}</h3>

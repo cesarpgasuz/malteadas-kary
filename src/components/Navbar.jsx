@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
 import { useState, useEffect, useMemo } from "react"
 import IconCart from "./icons/IconCart"
 import useOrden from "../hooks/useOrden"
@@ -10,6 +10,8 @@ const Navbar = () => {
 
     const {orden} = useOrden()
     const navigate = useNavigate()
+    const {pathname} = useLocation()
+
 
     const [isScrolled, setIsScrolled] = useState(false)
 
@@ -54,9 +56,9 @@ const Navbar = () => {
                     >Malteadas Kary</span>
 
                     <div className="fixed bg-sky-950 rounded-full flex w-fit bottom-2 left-0 right-0 mx-auto items-center gap-8 px-8 py-2">
-                        <ul><Link to="/"><IconMalteada className={iconClases()} color="#f0f9ff" /><span className="hidden">Inicio</span></Link></ul>
-                        <ul><Link to="/servicios"><IconServicios className={iconClases()} color="#f0f9ff" /><span className="hidden">Servicios</span></Link></ul>
-                        <ul><Link to="/horario"><IconReloj className={iconClases()} color="#f0f9ff" /><span className="hidden">Horario</span></Link></ul>
+                        <ul><Link to="/"><IconMalteada className={iconClases()} color={`${pathname === '/' ? '#fde047' : '#f0f9ff'}`} /><span className="hidden">Inicio</span></Link></ul>
+                        <ul><Link to="/servicios"><IconServicios className={iconClases()} color={`${pathname === '/servicios' ? '#fde047' : '#f0f9ff'}`} /><span className="hidden">Servicios</span></Link></ul>
+                        <ul><Link to="/horario"><IconReloj className={iconClases()} color={`${pathname === '/horario' ? '#fde047' : '#f0f9ff'}`} /><span className="hidden">Horario</span></Link></ul>
                     </div>
 
                      <button
