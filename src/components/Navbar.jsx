@@ -53,7 +53,7 @@ const Navbar = () => {
                         className={`${isScrolled ? 'text-slate-900' : 'text-transparent'} transition-all font-bold`}
                     >Malteadas Kary</span>
 
-                    <div className="fixed bg-sky-950 rounded-full flex w-fit bottom-0 left-0 right-0 mx-auto items-center gap-8 px-8 py-2">
+                    <div className="fixed bg-sky-950 rounded-full flex w-fit bottom-2 left-0 right-0 mx-auto items-center gap-8 px-8 py-2">
                         <ul><Link to="/"><IconMalteada className={iconClases()} color="#f0f9ff" /><span className="hidden">Inicio</span></Link></ul>
                         <ul><Link to="/servicios"><IconServicios className={iconClases()} color="#f0f9ff" /><span className="hidden">Servicios</span></Link></ul>
                         <ul><Link to="/horario"><IconReloj className={iconClases()} color="#f0f9ff" /><span className="hidden">Horario</span></Link></ul>
