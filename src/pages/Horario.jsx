@@ -1,5 +1,6 @@
 import { HORARIOS } from "../data"
-import HorarioItem from "./ui/HorarioItem"
+import HorarioItem from "../components/ui/HorarioItem"
+
 const Horario = () => {
   return (
     <div className="contenedor py-6">
