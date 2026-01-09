@@ -32,7 +32,7 @@ const Navbar = () => {
 
         //limpiamos el listener cuando el componente se desmote
         return () => {
-            window.addEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         }
 
     }, [])
